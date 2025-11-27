@@ -1,0 +1,6 @@
+train: datasets/testexp/train/images
+val: datasets/testexp/valid/images
+test: datasets/testexp/test/images
+
+nc: 3
+names: ['green_light', 'red_light', 'yellow_light']

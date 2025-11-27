@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.5">
+  <diagram id="system_function_arch" name="系统功能架构图">
+    <mxGraphModel dx="1338" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="platform" value="基于前后端分离的多尺度目标检测系统 (Vue + Spring Boot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b4a7d6;strokeColor=#666666;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="120" y="900" width="960" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sys1" value="检测数据管理子系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9cb9c;strokeColor=#b45f06;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="120" y="800" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sys2" value="实时监测与报警子系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9cb9c;strokeColor=#b45f06;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="470" y="800" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sys3" value="用户与权限管理子系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9cb9c;strokeColor=#b45f06;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="830" y="800" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="func1" value="数据统计与实时监测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76a5af;strokeColor=#134f5c;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="120" y="700" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="func2" value="检测图像与视频展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76a5af;strokeColor=#134f5c;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="380" y="700" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="func3" value="状态监控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76a5af;strokeColor=#134f5c;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="630" y="700" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="func4" value="报警管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76a5af;strokeColor=#134f5c;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="840" y="700" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="func5" value="用户管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76a5af;strokeColor=#134f5c;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="970" y="700" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="f1_1" value="检测结果分类统计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#3c78d8;" parent="1" vertex="1">
+          <mxGeometry x="120" y="600" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f1_2" value="时间维度统计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#3c78d8;" parent="1" vertex="1">
+          <mxGeometry x="120" y="560" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f1_4" value="实时数据推送(WebSocket)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#3c78d8;" parent="1" vertex="1">
+          <mxGeometry x="120" y="524" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_1" value="视频流播放(Video.js)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="600" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_2" value="多格式视频支持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="560" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_5" value="多功能图像检测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="524" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f3_1" value="异常监测与推送" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#38761d;" parent="1" vertex="1">
+          <mxGeometry x="630" y="600" width="150" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f3_2" value="基础信息展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#38761d;" parent="1" vertex="1">
+          <mxGeometry x="630" y="560" width="150" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f3_5" value="历史报警记录" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#38761d;" parent="1" vertex="1">
+          <mxGeometry x="630" y="520" width="150" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f4_1" value="报警信息统计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="840" y="600" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f4_2" value="处理状态管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="840" y="560" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f4_3" value="报警处理提示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="840" y="520" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f5_1" value="用户信息展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79;" parent="1" vertex="1">
+          <mxGeometry x="980" y="600" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f5_2" value="权限分配" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79;" parent="1" vertex="1">
+          <mxGeometry x="980" y="560" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f5_4" value="个人信息管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79;" parent="1" vertex="1">
+          <mxGeometry x="980" y="520" width="100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" style="endArrow=block;html=1;strokeColor=#134f5c;edgeStyle=orthogonalEdgeStyle;" parent="1" source="platform" target="sys1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" style="endArrow=block;html=1;strokeColor=#134f5c;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="platform" target="sys2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="903" as="sourcePoint" />
+            <mxPoint x="620" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3" style="endArrow=block;html=1;strokeColor=#134f5c;edgeStyle=orthogonalEdgeStyle;" parent="1" source="platform" target="sys3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="endArrow=block;html=1;strokeColor=#b45f06;edgeStyle=orthogonalEdgeStyle;" parent="1" source="sys1" target="func1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow5" style="endArrow=block;html=1;strokeColor=#b45f06;edgeStyle=orthogonalEdgeStyle;" parent="1" source="sys1" target="func2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow6" style="endArrow=block;html=1;strokeColor=#b45f06;edgeStyle=orthogonalEdgeStyle;" parent="1" source="sys2" target="func3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow7" style="endArrow=block;html=1;strokeColor=#b45f06;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="sys2" target="func4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow8" style="endArrow=block;html=1;strokeColor=#b45f06;edgeStyle=orthogonalEdgeStyle;" parent="1" source="sys3" target="func5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sdfMfdb1AMvhHyW4VVHZ-1" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="f1_1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="700" as="sourcePoint" />
+            <mxPoint x="255" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sdfMfdb1AMvhHyW4VVHZ-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="700" as="sourcePoint" />
+            <mxPoint x="480" y="636" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sdfMfdb1AMvhHyW4VVHZ-3" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="704.4100000000001" y="700" as="sourcePoint" />
+            <mxPoint x="704.4100000000001" y="636" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="704.4100000000001" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sdfMfdb1AMvhHyW4VVHZ-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="700" as="sourcePoint" />
+            <mxPoint x="890" y="636" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="890" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sdfMfdb1AMvhHyW4VVHZ-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1029.4099999999999" y="700" as="sourcePoint" />
+            <mxPoint x="1029.4099999999999" y="636" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1029.4099999999999" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

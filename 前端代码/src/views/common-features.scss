@@ -1,0 +1,186 @@
+.feature-page {
+  min-height: 100vh;
+  background-color: #1a1c1e;
+}
+
+.main-content {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 32px;
+  background: transparent;
+  border: 1.5px solid #3a3f55;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  padding: 32px 28px 28px 28px;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border-color: #409eff;
+}
+
+.params-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.param-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.param-label {
+  color: #b0b0b0;
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.upload-section {
+  margin-bottom: 30px;
+}
+
+.upload-area {
+  border: 2px dashed #3a3f55;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  background: rgba(58, 63, 85, 0.1);
+  transition: all 0.3s;
+}
+.upload-area:hover {
+  border-color: #409eff;
+  background: rgba(64, 158, 255, 0.1);
+}
+.upload-icon {
+  font-size: 48px;
+  color: #409eff;
+  margin-bottom: 15px;
+}
+.upload-text {
+  color: #b0b0b0;
+}
+.upload-text em {
+  color: #409eff;
+  font-style: normal;
+}
+.result-section {
+  margin-top: 30px;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.loading-icon {
+  font-size: 48px;
+  color: #409eff;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.empty-result {
+  text-align: center;
+  padding: 40px 0;
+}
+.image-card, .metrics-card, .log-card {
+  background: linear-gradient(135deg, #2a2d3e 0%, #1a1c1e 100%);
+  border: 1px solid #3a3f55;
+}
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.result-image {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.result-images-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.result-image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result-image-large {
+  max-width: 80vw;
+  max-width: 600px;
+  max-height: 60vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0003;
+  margin-bottom: 8px;
+  background: #222;
+}
+.result-image-name {
+  text-align: center;
+  font-size: 16px;
+  color: #b0b0b0;
+  margin-top: 4px;
+  word-break: break-all;
+}
+/* Element Plus 组件样式覆盖 */
+:deep(.el-card) {
+  background: transparent;
+  border: none;
+}
+:deep(.el-card__header) {
+  background: transparent;
+  border-bottom: 1px solid #3a3f55;
+  color: #fff;
+}
+:deep(.el-card__body) {
+  background: transparent;
+}
+:deep(.el-select) {
+  width: 100%;
+}
+:deep(.el-slider) {
+  flex: 1;
+}
+:deep(.el-slider__runway) {
+  background-color: #3a3f55;
+}
+:deep(.el-slider__bar) {
+  background-color: #409eff;
+}
+:deep(.el-slider__button) {
+  border-color: #409eff;
+}
+:deep(.el-tag) {
+  border-radius: 4px;
+}
+:deep(.el-button) {
+  border-radius: 6px;
+}
+:deep(.el-upload) {
+  width: 100%;
+}
+:deep(.el-upload-dragger) {
+  background: transparent;
+  border: none;
+  width: 100%;
+} 

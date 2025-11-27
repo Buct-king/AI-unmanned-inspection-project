@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lqz.unmannedinspectionsystem.mapper.ModelPtMapper">
+    <insert id="insert" parameterType="cn.lqz.unmannedinspectionsystem.pojo.entity.ModelPt">
+        INSERT INTO model_pt (file_name, title, description, status)
+        VALUES (#{fileName}, #{title}, #{description}, #{status})
+    </insert>
+
+    <update id="update" parameterType="cn.lqz.unmannedinspectionsystem.pojo.entity.ModelPt">
+        UPDATE model_pt
+        SET title = #{title}, description = #{description}, status = #{status}, update_time = NOW()
+        WHERE file_name = #{fileName}
+    </update>
+
+    <delete id="deleteByFileName" parameterType="string">
+        DELETE FROM model_pt WHERE file_name = #{fileName}
+    </delete>
+
+    <select id="selectAll" resultType="cn.lqz.unmannedinspectionsystem.pojo.entity.ModelPt">
+        SELECT * FROM model_pt
+    </select>
+
+    <select id="selectByFileName" parameterType="string" resultType="cn.lqz.unmannedinspectionsystem.pojo.entity.ModelPt">
+        SELECT * FROM model_pt WHERE file_name = #{fileName}
+    </select>
+</mapper> 

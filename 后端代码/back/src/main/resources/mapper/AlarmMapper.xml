@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.lqz.unmannedinspectionsystem.mapper.AlarmMapper">
+
+    <insert id="insert">
+        insert into alarm (device_id, mp_id,description ,status, alarm_time, create_time, update_time)
+        values
+            (#{deviceId},#{mpId},#{description},#{status},#{alarmTime},#{createTime},#{updateTime});
+    </insert>
+
+    <update id="update">
+        update alarm
+        <set>
+            <if test="deviceId!=null">device_id = #{deviceId},</if>
+            <if test="mpId!=null">mp_id=#{mpId},</if>
+            <if test="description!=null">description=#{description},</if>
+            <if test="status!=null">status=#{status},</if>
+            <if test="alarmTime!=null">alarm_time=#{alarmTime},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="updateTime!=null">update_time=#{updateTime},</if>
+        </set>
+            where alarm_id = #{alarmId}
+    </update>
+
+    <select id="findBatch" resultType="cn.lqz.unmannedinspectionsystem.pojo.vo.AlarmVO">
+        select a.*,d.name as deviceName,a.status as status
+        from `alarm` a
+        left outer join `device` d on a.device_id=d.device_id
+        <where>
+            <if test="deviceType!=null">and d.device_type=#{deviceType}</if>
+            <if test="status!=null">and a.status=#{status}</if>
+            <if test="mpId!=null">and mp_id=#{mpId}</if>
+            <if test="startTime!=null">and alarm_time &gt;= #{startTime} </if>
+            <if test="endTime!=null">and alarm_time &lt;= #{endTime}</if>
+        </where>
+        order by alarm_time desc
+    </select>
+    <select id="countByAlarmTime" resultType="java.lang.Long">
+        select count(*)
+        from `alarm`
+        where alarm_time &gt;= #{startTime} and alarm_time &lt;= #{endTime}
+    </select>
+    <select id="countByProcessedTime" resultType="java.lang.Long">
+        select count(*)
+        from `alarm`
+        where processed_time &gt;= #{startTime} and processed_time &lt;= #{endTime}
+    </select>
+</mapper>

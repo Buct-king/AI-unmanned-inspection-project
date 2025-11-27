@@ -1,0 +1,69 @@
+// Element Plus 暗黑模式变量
+:root {
+  // 背景色
+  --el-bg-color: #141414;
+  --el-bg-color-overlay: #1d1e1f;
+  --el-bg-color-page: #0a0a0a;
+  
+  // 文字颜色
+  --el-text-color-primary: #fff;
+  --el-text-color-regular: #e5eaf3;
+  --el-text-color-secondary: #a3a6ad;
+  --el-text-color-placeholder: #8c8c8c;
+  
+  // 边框颜色
+  --el-border-color: #303030;
+  --el-border-color-light: #303030;
+  --el-border-color-lighter: #303030;
+  
+  // 填充色
+  --el-fill-color: #1d1e1f;
+  --el-fill-color-light: #1d1e1f;
+  --el-fill-color-lighter: #262727;
+  --el-fill-color-blank: #000;
+  
+  // 组件深色背景
+  --el-mask-color: rgba(0, 0, 0, 0.8);
+  --el-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  
+  // 禁用状态
+  --el-disabled-bg-color: #1d1e1f;
+  --el-disabled-text-color: #666;
+  --el-disabled-border-color: #303030;
+
+  // 表格
+  --el-table-bg-color: var(--el-bg-color-overlay);
+  --el-table-tr-bg-color: var(--el-bg-color-overlay);
+  --el-table-header-bg-color: var(--el-bg-color-overlay);
+  --el-table-border-color: var(--el-border-color);
+  --el-table-row-hover-bg-color: var(--el-fill-color-light);
+  
+  // 卡片
+  --el-card-bg-color: var(--el-bg-color-overlay);
+  
+  // 对话框
+  --el-dialog-bg-color: var(--el-bg-color-overlay);
+  --el-dialog-border-color: var(--el-border-color);
+  
+  // 按钮
+  --el-button-bg-color: var(--el-bg-color-overlay);
+  --el-button-border-color: var(--el-border-color);
+  --el-button-hover-bg-color: var(--el-fill-color-light);
+  
+  // 输入框
+  --el-input-bg-color: var(--el-bg-color-overlay);
+  --el-input-border-color: var(--el-border-color);
+  --el-input-hover-border-color: var(--el-color-primary);
+  
+  // 选择器
+  --el-select-input-focus-border-color: var(--el-color-primary);
+  
+  // 分页
+  --el-pagination-bg-color: transparent;
+  --el-pagination-text-color: var(--el-text-color-secondary);
+  --el-pagination-button-color: var(--el-text-color-primary);
+  --el-pagination-button-bg-color: var(--el-bg-color-overlay);
+  --el-pagination-button-disabled-color: var(--el-text-color-placeholder);
+  --el-pagination-button-disabled-bg-color: var(--el-bg-color-overlay);
+  --el-pagination-hover-color: var(--el-color-primary);
+} 

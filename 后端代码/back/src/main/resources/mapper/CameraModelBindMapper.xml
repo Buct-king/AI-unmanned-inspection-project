@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lqz.unmannedinspectionsystem.mapper.CameraModelBindMapper">
+    <resultMap id="BaseResultMap" type="cn.lqz.unmannedinspectionsystem.pojo.entity.CameraModelBind">
+        <id property="id" column="id" />
+        <result property="cameraId" column="camera_id" />
+        <result property="cameraName" column="camera_name" />
+        <result property="cameraSource" column="camera_source" />
+        <result property="modelName" column="model_name" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <insert id="insert" parameterType="cn.lqz.unmannedinspectionsystem.pojo.entity.CameraModelBind">
+        INSERT INTO camera_model_bind (camera_id, camera_name, camera_source, model_name, create_time, update_time)
+        VALUES (#{cameraId}, #{cameraName}, #{cameraSource}, #{modelName}, NOW(), NOW())
+    </insert>
+
+    <update id="update" parameterType="cn.lqz.unmannedinspectionsystem.pojo.entity.CameraModelBind">
+        UPDATE camera_model_bind
+        SET camera_id=#{cameraId}, camera_name=#{cameraName}, camera_source=#{cameraSource}, model_name=#{modelName}, update_time=NOW()
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteById" parameterType="long">
+        DELETE FROM camera_model_bind WHERE id=#{id}
+    </delete>
+
+    <select id="selectById" parameterType="long" resultMap="BaseResultMap">
+        SELECT * FROM camera_model_bind WHERE id=#{id}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT * FROM camera_model_bind ORDER BY id DESC
+    </select>
+
+    <select id="selectByCameraId" parameterType="string" resultMap="BaseResultMap">
+        SELECT * FROM camera_model_bind WHERE camera_id=#{cameraId}
+    </select>
+</mapper> 

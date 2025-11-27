@@ -1,0 +1,1 @@
+export { default as SmartTraining } from './SmartTraining.vue'; 

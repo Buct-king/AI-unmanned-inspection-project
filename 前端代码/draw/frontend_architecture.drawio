@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-20T10:00:00.000Z">
+  <diagram id="frontend_arch" name="Frontend Architecture">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Core Framework -->
+        <mxCell id="vue3_core" value="Vue 3&#xa;Core Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- TypeScript -->
+        <mxCell id="typescript" value="TypeScript" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- UI Layer -->
+        <mxCell id="element_plus" value="Element Plus&#xa;UI Components" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="210" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- State Management -->
+        <mxCell id="pinia" value="Pinia&#xa;State Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="210" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Routing -->
+        <mxCell id="router" value="Vue Router" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- HTTP Client -->
+        <mxCell id="axios" value="Axios&#xa;HTTP Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Build Tool -->
+        <mxCell id="vite" value="Vite&#xa;Build Tool" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Visualization -->
+        <mxCell id="echarts" value="ECharts&#xa;Data Visualization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="380" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Styling -->
+        <mxCell id="scss" value="SCSS&#xa;Styling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="380" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="ts_vue" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="typescript" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="el_vue" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="element_plus" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="pinia_vue" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;rounded=0;" edge="1" parent="1" source="pinia" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="router_vue" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;" edge="1" parent="1" source="router" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="axios_vue" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0;entryY=1;rounded=0;" edge="1" parent="1" source="axios" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="vite_vue" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=1;entryY=1;rounded=0;" edge="1" parent="1" source="vite" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="echarts_vue" value="" style="endArrow=classic;html=1;exitX=1;exitY=0;entryX=0.25;entryY=1;rounded=0;" edge="1" parent="1" source="echarts" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="scss_vue" value="" style="endArrow=classic;html=1;exitX=0;exitY=0;entryX=0.75;entryY=1;rounded=0;" edge="1" parent="1" source="scss" target="vue3_core">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Frontend Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="160" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

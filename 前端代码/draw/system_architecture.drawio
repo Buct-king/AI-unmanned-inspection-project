@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.5">
+  <diagram id="system_architecture" name="系统分层架构图">
+    <mxGraphModel dx="898" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frontend" value="前端 (Vue.js)&#xa;• Vite&#xa;• Pinia&#xa;• Element Plus&#xa;• ECharts&#xa;• Video.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#3c78d8;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="60" y="170" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" value="后端 (Spring Boot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9cb9c;strokeColor=#b45f06;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="350" y="130" width="320" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="controller" value="Controller 层&#xa;• RESTful API&#xa;• WebSocket (STOMP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="370" y="150" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="service" value="Service 层&#xa;• 业务逻辑实现" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#38761d;" parent="1" vertex="1">
+          <mxGeometry x="370" y="230" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dao" value="DAO 层&#xa;• MyBatis-Plus&#xa;• Redis 缓存" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79;" parent="1" vertex="1">
+          <mxGeometry x="370" y="310" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="security" value="安全与认证&#xa;• Spring Security&#xa;• JWT Token" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="760" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="websocket" value="WebSocket&#xa;• 实时推送/监测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b6d7a8;strokeColor=#38761d;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="760" y="240" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="database" value="数据库 (MySQL)" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#b4a7d6;strokeColor=#6c3483;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="450" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_ws" value="WebSocket&lt;div&gt;&amp;nbsp;(实时推送)&lt;/div&gt;" style="endArrow=block;dashed=1;html=1;strokeColor=#38761d;fontSize=12;edgeStyle=orthogonalEdgeStyle;" parent="1" source="frontend" target="controller" edge="1">
+          <mxGeometry x="0.1176" y="5" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="260" />
+              <mxPoint x="320" y="180" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_cs" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1" source="controller" target="service" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_sd" style="endArrow=block;html=1;strokeColor=#a64d79;" parent="1" source="service" target="dao" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_db" style="endArrow=block;html=1;strokeColor=#6c3483;" parent="1" source="dao" target="database" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_sec" value="Token校验" style="endArrow=block;dashed=1;html=1;strokeColor=#cc0000;fontSize=12;" parent="1" source="security" target="controller" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_ws2" style="endArrow=block;dashed=1;html=1;strokeColor=#38761d;fontSize=12;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="websocket" target="controller" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="721" y="270" />
+              <mxPoint x="721" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,6 @@
+train: datasets/trafficlight/train/images
+val: datasets/trafficlight/valid/images
+test: datasets/trafficlight/test/images
+
+nc: 1
+names: ['trafik-isiklari']

@@ -1,0 +1,37 @@
+unmanned-inspection-system:
+  datasource:
+    dbName: detection
+    host: localhost
+    port: 3306
+    username: root
+    # 改成你的数据库密码
+    password: shuai666
+
+  # 这个是Redis配置，后面可能会用到，先不用改
+  redis:
+    database: 8
+    host: localhost
+    password: 20030902
+    port: 6379
+  
+  project:
+    # 改成你的本地路径，自定义路径，这个路径是用来存后端运行的临时文件
+    folder: C:/Users/123/Desktop/2025end/unmanned-inspection-system/file
+  service:
+    # 新建用户默认密码
+    default-password: 123321
+    # 数据库备份配置信息
+    database:
+      # 改成你的本地路径，自定义路径，这个路径是用来存后端运行的临时文件
+      default-folder: C:/Users/123/Desktop/2025end/unmanned-inspection-system/file
+      dbName: frond-end
+      host: localhost
+      port: 3306
+      username: root
+      # 改成你的数据库密码
+      password: 20030902
+    # YOLO service configuration 用不到了，但是先留着
+    yolo:
+      input-image-filepath: C:/Users/123/Desktop/2025end/unmanned-inspection-system/file/yolo/input
+      output-image-filepath: C:/Users/123/Desktop/2025end/unmanned-inspection-system/file/yolo/output
+      model-filepath: C:/Users/123/Desktop/2025end/unmanned-inspection-system/file/yolo/model

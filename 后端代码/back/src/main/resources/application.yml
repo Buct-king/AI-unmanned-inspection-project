@@ -1,0 +1,99 @@
+server:
+  port: 8080
+  servlet:
+    # 所有请求路径前缀
+    context-path: /api
+
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  web:
+    resources:
+      add-mappings: false
+  datasource:
+    url: jdbc:mysql://${unmanned-inspection-system.datasource.host}:${unmanned-inspection-system.datasource.port}/${unmanned-inspection-system.datasource.dbName}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: ${unmanned-inspection-system.datasource.username}
+    password: ${unmanned-inspection-system.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: HikariCPDatasource
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  data:
+    redis:
+      database: ${unmanned-inspection-system.redis.database}
+      host: ${unmanned-inspection-system.redis.host}
+      password: ${unmanned-inspection-system.redis.password}
+      port: ${unmanned-inspection-system.redis.port}
+      # 连接超时时间（毫秒）
+      connect-timeout: 5000
+      # 操作超时时间（毫秒）
+      timeout: 3000
+      # Lettuce 客户端的配置
+      lettuce:
+        # 连接池配置
+        pool:
+          # 最小空闲连接
+          min-idle: 0
+          # 最大空闲连接
+          max-idle: 8
+          # 最大活跃连接
+          max-active: 8
+          # 从连接池获取连接 最大超时时间，小于等于0则表示不会超时
+          max-wait: 10000
+# logback
+logback:
+  project:
+    folder: ${unmanned-inspection-system.project.folder}
+  log:
+    root:
+      level: info
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  # mapperXML文件路径
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类所在包
+  type-aliases-package: cn.lqz.unmannedinspectionsystem.pojo.entity
+
+service:
+  # 新建用户默认密码
+  default-password: ${unmanned-inspection-system.service.default-password}
+  flask:
+    base-url: http://127.0.0.1:5000
+  flask2:
+    base-url: http://127.0.0.1:5001
+  # 数据库备份配置信息
+  database:
+    # 默认文件夹
+    default-folder: ${unmanned-inspection-system.service.database.default-folder}
+    host: ${unmanned-inspection-system.service.database.host}
+    port: ${unmanned-inspection-system.service.database.port}
+    username: ${unmanned-inspection-system.service.database.username}
+    password: ${unmanned-inspection-system.service.database.password}
+    dbName: ${unmanned-inspection-system.service.database.dbName}
+  # yolov5 模型参数配置
+  yolo:
+    # 入参图片文件夹
+    input-image-file-folder-path: ${unmanned-inspection-system.service.yolo.input-image-file-folder-path}
+    # 出参图片文件夹
+    output-image-file-folder-path: ${unmanned-inspection-system.service.yolo.output-image-file-folder-path}
+    # pt文件文件夹
+    model-file-folder-path: ${unmanned-inspection-system.service.yolo.model-file-folder-path}
+    # 模型执行器
+    executor-path: ${unmanned-inspection-system.service.yolo.executor-path}
+    # Flask服务配置
+    flask:
+      base-url: ${unmanned-inspection-system.service.yolo.flask.base-url:http://localhost:5000}
+  # 测点图片文件夹
+  mp:
+    image-folder-path: ${unmanned-inspection-system.service.mp.image-folder-path}

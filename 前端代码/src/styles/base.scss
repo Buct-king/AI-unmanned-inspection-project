@@ -1,0 +1,91 @@
+:root {
+  // 基础颜色
+  --b-page-bg-color: #f5f5f5;
+  --b-text-color: #000;
+  --b-bg-color: var(--el-bg-color);
+  --b-border-color: var(--el-input-border-color);
+  --b-dialog-bg-color: var(--el-dialog-bg-color);
+
+  // 组件颜色
+  --b-header-bg-color: #fff;
+  --b-sidebar-bg-color: #fff;
+  --b-card-bg-color: #fff;
+  
+  // 表格相关
+  --b-table-header-bg-color: #f1f1f1;
+  --b-table-row-hover-bg-color: #e8f4ff;
+  
+  // 文字颜色
+  --b-text-color-primary: var(--el-text-color-primary);
+  --b-text-color-regular: var(--el-text-color-regular);
+  --b-text-color-secondary: var(--el-text-color-secondary);
+}
+
+// 全局暗黑模式变量
+html.dark {
+  // 基础颜色
+  --b-page-bg-color: #0a0a0a;
+  --b-text-color: #fff;
+  --b-bg-color: #141414;
+  --b-border-color: #303030;
+  --b-dialog-bg-color: #1a1a1a;
+
+  // 组件颜色
+  --b-header-bg-color: #1a1c1e;
+  --b-sidebar-bg-color: #1a1c1e;
+  --b-card-bg-color: #282b30;
+  
+  // 表格相关
+  --b-table-header-bg-color: #1a1c1e;
+  --b-table-row-hover-bg-color: #1d1d1d;
+  
+  // 文字颜色
+  --b-text-color-primary: #fff;
+  --b-text-color-regular: #e5eaf3;
+  --b-text-color-secondary: #8c8c8c;
+
+  // Element Plus 暗黑模式变量
+  --el-bg-color: #141414;
+  --el-bg-color-overlay: #1d1e1f;
+  --el-bg-color-page: #0a0a0a;
+  --el-text-color-primary: #fff;
+  --el-text-color-regular: #e5eaf3;
+  --el-text-color-secondary: #a3a6ad;
+  --el-text-color-placeholder: #8c8c8c;
+  --el-border-color: #303030;
+  --el-border-color-light: #303030;
+  --el-border-color-lighter: #303030;
+  --el-fill-color: #1d1e1f;
+  --el-fill-color-light: #1d1e1f;
+  --el-fill-color-lighter: #262727;
+  --el-fill-color-blank: #000;
+  --el-mask-color: rgba(0, 0, 0, 0.8);
+  --el-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --el-disabled-bg-color: #1d1e1f;
+  --el-disabled-text-color: #666;
+  --el-disabled-border-color: #303030;
+
+  // 自定义变量
+  --card-bg-color: var(--el-bg-color-overlay);
+  --card-border-color: var(--el-border-color);
+  --text-primary: var(--el-text-color-primary);
+  --text-secondary: var(--el-text-color-secondary);
+}
+
+// 全局基础样式
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--b-page-bg-color);
+  color: var(--b-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+  min-height: 100vh;
+  background-color: var(--el-bg-color-page);
+  color: var(--el-text-color-primary);
+} 

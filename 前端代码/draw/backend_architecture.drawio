@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-20T10:00:00.000Z">
+  <diagram id="backend_arch" name="Backend Architecture">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Title -->
+        <mxCell id="title" value="Backend Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="160" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Core Framework -->
+        <mxCell id="spring_boot" value="Spring Boot&#xa;Core Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="180" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Maven -->
+        <mxCell id="maven" value="Maven&#xa;Dependency Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Security -->
+        <mxCell id="security" value="Spring Security&#xa;+ JWT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="190" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Database -->
+        <mxCell id="database" value="MySQL&#xa;Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="580" y="280" width="80" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- MyBatis -->
+        <mxCell id="mybatis" value="MyBatis&#xa;ORM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="190" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- REST API -->
+        <mxCell id="rest_api" value="RESTful API&#xa;+ Swagger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Cache -->
+        <mxCell id="cache" value="Spring Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="280" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Message Queue -->
+        <mxCell id="mq" value="Message Queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="360" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Scheduler -->
+        <mxCell id="scheduler" value="Task Scheduler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="120" y="360" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- CORS -->
+        <mxCell id="cors" value="CORS Config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="360" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="maven_spring" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="maven" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="security_spring" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="security" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mybatis_spring" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;rounded=0;" edge="1" parent="1" source="mybatis" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mybatis_db" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="mybatis" target="database">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="rest_spring" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0;entryY=1;rounded=0;" edge="1" parent="1" source="rest_api" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="cache_spring" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;" edge="1" parent="1" source="cache" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mq_spring" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;rounded=0;" edge="1" parent="1" source="mq" target="cache">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="scheduler_spring" value="" style="endArrow=classic;html=1;exitX=1;exitY=0;entryX=0.25;entryY=1;rounded=0;" edge="1" parent="1" source="scheduler" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="cors_spring" value="" style="endArrow=classic;html=1;exitX=0;exitY=0;entryX=0.75;entryY=1;rounded=0;" edge="1" parent="1" source="cors" target="spring_boot">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Architecture Layers -->
+        <mxCell id="layers" value="Controller Layer&#xa;↓&#xa;Service Layer&#xa;↓&#xa;Data Access Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="680" y="180" width="120" height="80" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
